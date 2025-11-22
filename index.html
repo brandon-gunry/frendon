@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Curriculum Vitae — Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fc; --card:#ffffff; --muted:#6b7280; --accent:#0f172a; --primary:#0ea5a4;
+      --glass: rgba(15,23,42,0.06);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:var(--accent);-webkit-font-smoothing:antialiased}
+    .container{max-width:900px;margin:36px auto;padding:28px}
+    .cv{display:grid;grid-template-columns:260px 1fr;gap:24px}
+
+    /* Sidebar */
+    .side{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 20px var(--glass)}
+    .photo{width:100%;aspect-ratio:1/1;border-radius:10px;object-fit:cover;background:#e6eef0;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+    .name{font-size:20px;font-weight:700;margin-top:14px}
+    .title{color:var(--muted);font-weight:600;font-size:13px;margin-top:4px}
+    .contact{margin-top:18px;font-size:13px;color:var(--muted)}
+    .contact a{color:inherit;text-decoration:none}
+    .section-title{font-size:13px;font-weight:700;margin:18px 0 8px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+    .pill{display:inline-block;background:rgba(14,165,164,0.12);color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f6f6;padding:8px 10px;border-radius:8px;font-size:13px}
+
+    /* Main */
+    .main{background:var(--card);padding:26px;border-radius:14px;box-shadow:0 6px 20px var(--glass)}
+    .summary{color:var(--muted);line-height:1.6}
+    .item{margin-bottom:18px}
+    .job{display:flex;justify-content:space-between;gap:12px}
+    .job h4{margin:0;font-size:15px}
+    .job .period{color:var(--muted);font-size:13px}
+    .muted{color:var(--muted);font-size:14px}
+    ul{margin:8px 0 0 16px}
+
+    /* Projects & education row */
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:6px;background:#f3faf9;border:1px solid rgba(14,165,164,0.08);font-weight:600}
+
+    /* Print friendly */
+    @media print{
+      body{background:white}
+      .container{max-width:100%;margin:0;padding:0}
+      .cv{grid-template-columns:220px 1fr}
+      .side, .main{box-shadow:none;border-radius:0}
+    }
+
+    /* Responsive */
+    @media (max-width:780px){
+      .cv{grid-template-columns:1fr;}
+      .grid-two{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div>
+        <div style="font-weight:800;font-size:18px">Curriculum Vitae</div>
+        <div style="color:var(--muted);font-size:13px">Updated: <!-- put date here --> </div>
+      </div>
+      <div>
+        <button onclick="window.print()" style="padding:8px 12px;border-radius:8px;border:0;background:var(--primary);color:white;font-weight:700;cursor:pointer">Print / Save PDF</button>
+      </div>
+    </div>
+
+    <div class="cv">
+      <aside class="side">
+        <div class="photo">Your Photo</div>
+        <div class="name">Your Name</div>
+        <div class="title">Mechanical Engineer • Technical Writer</div>
+
+        <div class="section-title">Contact</div>
+        <div class="contact">
+          <div>Email: <a href="mailto:you@example.com">you@example.com</a></div>
+          <div>Phone: +254 7XX XXX XXX</div>
+          <div>Location: Nairobi, Kenya</div>
+          <div>Portfolio: <a href="#">yourwebsite.com</a></div>
+        </div>
+
+        <div class="section-title">Skills</div>
+        <div class="skills">
+          <span class="skill">SolidWorks</span>
+          <span class="skill">Technical Writing</span>
+          <span class="skill">FEA</span>
+          <span class="skill">MS Office</span>
+          <span class="skill">HTML / CSS</span>
+          <span class="skill">Project Management</span>
+        </div>
+
+        <div class="section-title">Languages</div>
+        <div class="muted">English (Fluent)<br/>Kiswahili (Native)</div>
+
+        <div class="section-title">Interests</div>
+        <div class="muted">Product design, open-source, cycling</div>
+      </aside>
+
+      <main class="main">
+        <div class="item">
+          <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+            <div>
+              <h2 style="margin:0;font-size:20px">Your Name</h2>
+              <div class="muted">Mechanical Engineer & Technical Writer — focused on product development and clear technical communication</div>
+            </div>
+            <div class="pill">Open to work</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="section-title">Professional Summary</div>
+          <p class="summary">Experienced mechanical engineer with X+ years in product development, CAD modelling, and creating clear technical documentation for academic and industrial clients. Strong track record delivering reports, manuals, and teaching materials. Comfortable working with cross-functional teams to convert complex engineering topics into concise, user-friendly content.</p>
+        </div>
+
+        <div class="item">
+          <div class="section-title">Work Experience</div>
+
+          <div class="job">
+            <div>
+              <h4>Senior Mechanical Engineer — Company Name</h4>
+              <div class="muted">Location</div>
+            </div>
+            <div class="period">Jan 2022 — Present</div>
+          </div>
+          <ul>
+            <li>Led design of <em>product/assembly</em> using SolidWorks reducing weight by 12% while maintaining strength.</li>
+            <li>Prepared technical reports, test protocols and user manuals for clients.</li>
+            <li>Mentored junior engineers and coordinated manufacturing handoffs.</li>
+          </ul>
+
+          <div style="height:12px"></div>
+
+          <div class="job">
+            <div>
+              <h4>Mechanical Design Engineer — Another Company</h4>
+              <div class="muted">Location</div>
+            </div>
+            <div class="period">Jun 2019 — Dec 2021</div>
+          </div>
+          <ul>
+            <li>Designed fixtures and jigs for production, improving throughput by 18%.</li>
+            <li>Performed tolerance stack-ups, GD&T checks and vendor communication.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="grid-two">
+            <div>
+              <div class="section-title">Education</div>
+              <div style="margin-bottom:8px">
+                <strong>B.Sc. Mechanical Engineering</strong>
+                <div class="muted">University Name — 2015–2019</div>
+              </div>
+              <div style="margin-bottom:8px">
+                <strong>Certifications</strong>
+                <div class="muted">SolidWorks Professional, Technical Writing Certificate</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="section-title">Projects</div>
+              <div style="margin-bottom:8px">
+                <strong>Project Title — Short one-liner</strong>
+                <div class="muted">A 2–3 sentence description that highlights results and your role.</div>
+              </div>
+              <div style="margin-bottom:8px">
+                <strong>Another Project — Short one-liner</strong>
+                <div class="muted">Focus on measurable impact: reduced cost, improved time-to-market, etc.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="section-title">Publications & Reports</div>
+          <div class="muted">List any notable documents, academic papers, or large reports you've authored.</div>
+        </div>
+
+        <div class="item">
+          <div class="section-title">References</div>
+          <div class="muted">Available upon request</div>
+        </div>
+
+      </main>
+    </div>
+
+    <div style="text-align:center;margin-top:18px;color:var(--muted);font-size:13px">Tip: Replace placeholder text with your details. Use the <strong>Print / Save PDF</strong> button to create a PDF version for job applications.</div>
+  </div>
+</body>
+</html>
